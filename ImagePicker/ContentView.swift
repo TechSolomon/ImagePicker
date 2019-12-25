@@ -10,12 +10,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        VStack {
+            
+            Image(uiImage: UIImage())
+                .frame(width: 200, height: 200)
+                .border(Color.black, width: 1)
+            
+            Button(action: {
+                print("Show image picker")
+            }, label: {
+                Text("Select Image")
+                    .font(.system(size: 32))
+            })
+            
+        }
     }
 }
